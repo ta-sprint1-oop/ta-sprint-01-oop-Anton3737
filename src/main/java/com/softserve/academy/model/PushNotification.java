@@ -51,8 +51,9 @@ public class PushNotification extends Notification {
         // TODO: Симуляція відправки (println)
         System.out.println("Pushing to token [" + getDeviceToken() + "]: " + getFormattedMessage());
 
-        System.out.println("----Pushing notification----");
+        System.out.println("-------Pushing notification-------");
         System.out.println("To: " + getRecipient());
+        System.out.println("Icon: " + getIconUrl());
         System.out.println("Content:\n" + getFormattedMessage());
         System.out.println("----------------------------------\n");
     }

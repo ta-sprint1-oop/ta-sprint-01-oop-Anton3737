@@ -35,7 +35,7 @@ public class EmailNotification extends Notification {
     public String getFormattedMessage() {
         // TODO: Subject: {subject}\n{message}
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Subject: ").append(getSubject()).append("\n").append(message);
+        stringBuilder.append("Subject: ").append(getSubject()).append("\n").append(getMessage());
         return stringBuilder.toString();
     }
 
@@ -52,7 +52,7 @@ public class EmailNotification extends Notification {
         System.out.println("To: " + getRecipient());
         System.out.println("From: " + getSenderEmail());
         System.out.println("Content:\n" + getFormattedMessage());
-        System.out.println("Attachment: " + (hasAttachment ? "Yes" : "No"));
+        System.out.println("Attachment: " + (isHasAttachment() ? "Yes" : "No"));
         System.out.println("----------------------------------\n");
     }
 
